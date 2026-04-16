@@ -88,6 +88,17 @@ body {
   display: none;
 }
 
+/* Focus styles for all interactive elements */
+[data-testid="test-profile-card"] a:focus {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+[data-testid="test-profile-card"] a:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
 /* Text Content Section */
 [data-testid="test-profile-card"] header {
   text-align: center;
@@ -184,6 +195,7 @@ body {
   text-decoration: underline;
   text-decoration-thickness: 2px;
   text-underline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.3);
 }
 
 [data-testid="test-user-social-links"] a:active {

@@ -21,17 +21,17 @@
       return;
     }
 
-    // Update text content with formatted date
+    // Update text content with current epoch timestamp in milliseconds
     const currentTimestamp = Date.now();
+    const newText = `Member since ${currentTimestamp}`;
+
+    // Only update if text has changed to avoid unnecessary announcements
+    if (timeElement.textContent !== newText) {
+      timeElement.textContent = newText;
+    }
+
+    // Set datetime attribute with full date and time (ISO 8601 format)
     const date = new Date(currentTimestamp);
-
-    // Format the date as "January 15, 2024" style
-    const options = { year: 'numeric', month: 'long', day: 'numeric' };
-    const formattedDate = date.toLocaleDateString('en-US', options);
-
-    timeElement.textContent = `Member since ${formattedDate}`;
-
-    // Set datetime attribute for semantic value
     timeElement.setAttribute('datetime', date.toISOString());
   }
 
@@ -39,14 +39,14 @@
    * Sets up the epoch timer with specified interval
    * @param {number} intervalMs - Update interval in milliseconds (500-1000ms recommended)
    */
-  function setupEpochTimer(intervalMs = 1000) {
-    // Validate interval is within reasonable bounds
+  function setupEpochTimer(intervalMs = 500) {
+    // Validate interval is within reasonable bounds (500ms to 1000ms)
     const validInterval = Math.max(500, Math.min(1000, intervalMs));
 
     // Set initial display
     updateTimeDisplay();
 
-    // Set up continuous updates
+    // Set up continuous updates at the specified interval
     const intervalId = setInterval(updateTimeDisplay, validInterval);
 
     // Return cleanup function for potential cleanup needs
@@ -105,7 +105,7 @@
    */
   const ProfileCardConfig = {
     avatarUrl: DEFAULT_AVATAR_URL,
-    timerInterval: 1000,
+    timerInterval: 500,
 
     setAvatarUrl: function(url) {
       this.avatarUrl = url;

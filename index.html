@@ -13,7 +13,7 @@
     <!-- Avatar Section -->
     <figure>
       <img data-testid="test-user-avatar" src="https://via.placeholder.com/150"
-        alt="User profile avatar">
+        alt="Profile photo of John Doe, a full-stack developer">
       <figcaption>User Avatar</figcaption>
     </figure>
 
@@ -22,7 +22,8 @@
       <h2 data-testid="test-user-name">John Doe</h2>
       <p data-testid="test-user-bio">Full-stack developer passionate about
         creating beautiful, accessible web applications.</p>
-      <time data-testid="test-user-time" datetime="2024-01-15">Member since
+      <time data-testid="test-user-time" datetime="2024-01-15"
+        aria-live="polite">Member since
         January 2024</time>
     </header>
 
@@ -31,20 +32,23 @@
       <ul>
         <li>
           <a href="https://github.com/johndoe"
-            data-testid="test-user-social-github" aria-label="GitHub Profile">
+            data-testid="test-user-social-github" aria-label="GitHub Profile"
+            target="_blank" rel="noopener noreferrer">
             GitHub
           </a>
         </li>
         <li>
           <a href="https://twitter.com/johndoe"
-            data-testid="test-user-social-twitter" aria-label="Twitter Profile">
+            data-testid="test-user-social-twitter" aria-label="Twitter Profile"
+            target="_blank" rel="noopener noreferrer">
             Twitter
           </a>
         </li>
         <li>
           <a href="https://linkedin.com/in/johndoe"
             data-testid="test-user-social-linkedin"
-            aria-label="LinkedIn Profile">
+            aria-label="LinkedIn Profile" target="_blank"
+            rel="noopener noreferrer">
             LinkedIn
           </a>
         </li>
