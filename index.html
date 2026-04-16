@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testable Profile Card</title>
+</head>
+
+<body>
+  <article data-testid="test-profile-card">
+    <!-- Avatar Section -->
+    <figure>
+      <img data-testid="test-user-avatar" src="https://via.placeholder.com/150"
+        alt="User profile avatar">
+      <figcaption>User Avatar</figcaption>
+    </figure>
+
+    <!-- Identity Section -->
+    <header>
+      <h2 data-testid="test-user-name">John Doe</h2>
+      <p data-testid="test-user-bio">Full-stack developer passionate about
+        creating beautiful, accessible web applications.</p>
+      <time data-testid="test-user-time" datetime="2024-01-15">Member since
+        January 2024</time>
+    </header>
+
+    <!-- Social Links Section -->
+    <nav data-testid="test-user-social-links" aria-label="Social media links">
+      <ul>
+        <li>
+          <a href="https://github.com/johndoe"
+            data-testid="test-user-social-github" aria-label="GitHub Profile">
+            GitHub
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/johndoe"
+            data-testid="test-user-social-twitter" aria-label="Twitter Profile">
+            Twitter
+          </a>
+        </li>
+        <li>
+          <a href="https://linkedin.com/in/johndoe"
+            data-testid="test-user-social-linkedin"
+            aria-label="LinkedIn Profile">
+            LinkedIn
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Hobbies Section -->
+    <section data-testid="test-user-hobbies">
+      <h3>Hobbies</h3>
+      <ul>
+        <li>Photography</li>
+        <li>Hiking</li>
+        <li>Reading</li>
+        <li>Gaming</li>
+      </ul>
+    </section>
+
+    <!-- Dislikes Section -->
+    <section data-testid="test-user-dislikes">
+      <h3>Dislikes</h3>
+      <ul>
+        <li>Slow internet</li>
+        <li>Bugs in production</li>
+        <li>Untested code</li>
+      </ul>
+    </section>
+  </article>
+</body>
+
+</html>
